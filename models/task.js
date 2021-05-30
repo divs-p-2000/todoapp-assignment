@@ -30,5 +30,5 @@ TaskSchema.virtual('time').get(function() {
 });
 
 TaskSchema.virtual('timeLeft').get(function() {
-    return Interval.fromDateTimes(DateTime.fromJSDate(Date.now()), DateTime.fromJSDate(this.due)).length('seconds');
+    return Interval.fromDateTimes(DateTime.fromJSDate(Date.now()), DateTime.fromJSDate(this.due)).length('minutes');
 });
