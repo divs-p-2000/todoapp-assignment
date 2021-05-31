@@ -1,5 +1,5 @@
 # todoapp-assignment
-Todo backend application with Express.js and MongoDB
+Todo backend application with Express.js and MongoDB. Hosted at - https://todoapp-assignment.herokuapp.com/
 
 While this app has been created over a short span of two days, there are a few improvements I can suggest in the current app itself (without adding any new features).
 - Using dotenv to setup environment variables. As of now, most of these are revealed in the code.
