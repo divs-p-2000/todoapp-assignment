@@ -1,5 +1,33 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    header(class='jumbotron')
+      div(class='container')
+        div(class='col-12 col-sm-6')
+          h1 Task Tracker
+          p Welcome to Task Tracker. You can keep track of your countless tasks here!
+        div(class='col-12 col-sm')
+
+    div(class='container')
+      div(class='row row-content')
+        div(class='col-12')
+          h2 Welcome Back! Sign in to your account
+        div(class='col-12 col-md-9')
+          if signinPrompt
+            p
+              font(color='red') Please sign in with your credentials.
+          form(method='POST' action='')
+            div(class='form-group row')
+              label(for='username' class='col-md-2 col-form-label') Username
+              div(class='col-md-10')
+                input(type='text' class='form-control' id='username' name='username' placeholder='Username')
+            div(class='form-group row')
+                label(for='password' class='col-md-2 col-form-label') Password
+                div(class='col-md-10')
+                  input(type='password' class='form-control' id='password' name='password' placeholder='Password')
+            div(class='form-group row')
+                div(class='offset-md-2 col-md-10')
+                  button(type='submit' class='btn btn-success') Login
+        
+        div(class='col-md-3') New user? You can sign up for an account 
+          a(href='/register') here!
