@@ -41,7 +41,8 @@ const findUser = async function (params) {
 }
 
 module.exports = {
+    findUser,
     saveUser,
     checkExistingUser,
-    confirmPasswordMatch
+    confirmPasswordMatch,
 };

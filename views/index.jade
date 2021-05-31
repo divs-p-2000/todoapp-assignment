@@ -31,3 +31,7 @@ block content
         
         div(class='col-md-3') New user? You can sign up for an account 
           a(href='/register') here!
+      if errors
+        ul
+          for error in errors
+            li!= error.msg
