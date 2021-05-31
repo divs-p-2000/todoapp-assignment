@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { loadPage, saveTask } = require('../controllers/userController');
+const { loadPage, saveTask, deleteTask } = require('../controllers/userController');
+const taskValidate = require('../validations/save');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -9,6 +10,8 @@ router.get('/', function(req, res, next) {
 
 router.get('/:id', loadPage);
 
-router.post('/:id', saveTask);
+router.post('/:id', taskValidate, saveTask);
+
+router.get('/:id/delete/:tid', deleteTask);
 
 module.exports = router;
